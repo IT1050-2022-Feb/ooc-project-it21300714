@@ -1,1 +1,130 @@
+//Maduhansa H.K.T.P.
+//IT21300714
+// Payment class -----
+
+//Payment.h
+
+class Payment
+{
+ 
+private: 
+
+    char Customer_NIC[10];
+    int R_ID;
+    int Pay_ID;
+
+public: 
+
+     Payment();
+     Payment(char pCustomer_NIC, int pR_ID, int pPay_ID)
+     void displayPayment();
+     void setPayment details();
+     ~Payment();
+};
+
+//Payment.cpp
+
+#include<iostream>
+#include<cstring>
+#include "Payment.h"
+using namespace std;
+
+Payment::Payment()
+     {
+     	strcpy(Customer_NIC,"");
+     	R_ID =0;
+     	Pay_ID=0;
+	 }
+void Payment::Payment(char pCustomer_NIC, int pR_ID, int pPay_ID)	 
+
+    {
+
+        Customer_NIC = pCustomer_NIC;
+        R_ID = pR_ID;
+        Pay_ID = pPay_ID;
+
+    }
+
+void Payment::displaypayment()
+	{
+
+        cout << "Customer NIC: " << Customer_NIC << endl;
+        cout << "R_ID: " << R_ID << endl;
+        cout << "Pay_ID: " << Pay_ID << endl;
+
+    }
+
+void Payment::setpaymentdetails(char newCustomer_NIC, int newR_ID, int newPay_ID)
+	{
+
+        Customer_NIC = newCustomer_NIC;
+        R_ID = newR_ID;
+        Pay_ID = newPay_ID;
+
+    }
+~Payment()
+{
+	cout << "Destructor runs" << endl;
+ }
+
+//Main Program
+
+#include <stdio.h>
+#include <cstring>
+#include "Customer.h"
+#include "Receptionist.h"
+#include "Hotel Manager.h"
+#include "Reservation.h"
+#include "Event.h"
+#include "Hall.h"
+#include "Payment.h"
+#include "Feedback.h"
+
+int main()
+    {
+    	
+     Customer *c_1;
+	 c_1 =new Customer(200171900976, "Anudi" , "0772449175", "N0:5, Bakery Street, Moratuwa");
+     c_1->storedetails();
+     
+     Receptionist *r_1;
+	 r_1=new Receptionist(2000678569, "Sahanya" , "0702678546");
+     r_1->Displaydetails();
+     
+     Hotel_Manager *hm_1;
+	 hm_1=new Hotel_Manager(5678909876, "Thanuri", "0716789875");
+     hm_1->Hotelmanager();
+     
+     Reservation *rv_1;
+	 rv_1=new Reservation(234, "200171900976", "09-08-2022", "07");
+     rv_1->setreservationdetails();
+     
+     Event *e_1;
+	 e_1=new Event(67, "09.00", "09-08-2022", "Wedding");
+     e_1->Displayeventdetails();
+     
+     Hall *h_1;
+	 h_1=new Hall(07, "Wedding", "Large");
+     h_1->Provideinformation();
+     
+     Payment *p_1;
+	 p_1=new Payment(200171900976, "234", "678980");
+     p_1->displayPayment();
+     
+     Feedback *F_1;
+	 F_1=new Feedback(678, "feedback1", "Anudi");
+     F_1->addfeedback();
+     
+     //Delete Dynamic objects
+	 
+	 delete c_1;
+	 delete r_1;
+	 delete hm_1;
+	 delete rv_1;
+	 delete e_1;
+	 delete h_1;
+	 delete p_1;
+	 delete F_1;
+	 
+}
 
