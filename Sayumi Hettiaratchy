@@ -1,0 +1,126 @@
+//IT21333866
+//Hettiaratchy D.S.T
+// Class declaration
+
+//.h files
+
+//Declaration of "Customer" class
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+#include "Receptionist.h"
+#include "Reservation.h"
+#include"Payment.h"
+#include "Feedback.h"
+
+class Customer
+{
+	private:
+		int Customer_NIC;
+		string Customer_name[10];
+		int Contact;
+		string Address;
+		 
+    Public:
+    	Customer();
+    	Customer( int CNIC,string Cname[],int Contact,string Address);
+    	void Storedetails();
+    	~Customer();
+    	
+};
+
+
+// Declaration of "Receptionist" class
+
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+#include "Customer.h"
+#include "Hotel Manager.h"
+
+
+class Receptionist
+{
+	private:
+		int Rep_ID;
+		string Rep_name[10];
+		int Rep_Contact;
+		 
+    Public:
+    	Receptionist();
+    	Receptionist( int RID,string Rname[],int RContact);
+    	void Displaydetails();
+    	~Receptionist();
+    	
+};
+
+//.cpp files
+
+//Implementation of "Customer" class
+ 
+Customer::Customer()
+{
+	      strcpy(Customer_NIC,"");
+		  strcpy(Customer_name,"") ;
+		  strcpy(Contact,"") ;
+		  strcpy(Address,"");
+}
+
+Customer::Customer(int CNIC, string Cname[], int Contact, string Address) 
+
+{
+	      strcpy(Customer_NIC,CNIC);
+	      strcpy(Customer_name,Cname);
+}
+
+void Customer::Customer(int CNIC, string Cname[], int contact, string Address)
+
+{
+}
+void Customer::Storedetails()
+{
+}
+
+Customer::~Customer()
+
+
+{ 
+  cout<<"Destructor runs for Customer with Customer_NIC=" << Customer_NIC << " ,Customer_name = " << Customer_name << " ,Contact = " << Contact << " ,Address = " << Address << endl;
+  
+  }
+  
+  
+  
+ //Implementation of "Receptionist" class
+ 
+Receptionist::Receptionist()
+{
+	      strcpy(Rep_ID,"");
+		  strcpy(Rep_name,"") ;
+		  strcpy(Rep_Contact,"") ;
+		
+}
+
+Receptionist::Receptionist(int RID, string Rname[], int RContact) 
+
+{
+	      strcpy(Rep_ID,RID);
+	      strcpy(Rep_name,Rname);
+}
+
+void Receptionist::Receptionist(int RID, string Rname[], int RContact) 
+{
+}
+void Receptionist::Displaydetails()
+{
+}
+
+Receptionist::~Receptionist()
+
+
+{ 
+  cout<<"Destructor runs for Receptionist with Rep_ID=" << Rep_ID << " ,Rep_name = " << Rep_name << " ,Rep_Contact = " << Rep_Contact << endl;
+  
+  }
