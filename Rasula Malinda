@@ -1,1 +1,85 @@
+//IT21299070_Warunamal.N.R.M
+//Individual entities selected (Feedback,Event)
 
+//.h files created
+
+class Feedback
+{
+	private:
+		int feedbackId;
+		char description;
+		string customer_name;
+	
+	public:
+		 Feedback();
+	     Feedback(int pfeedbackId,char pdescription, string pcustomer_name);
+	     void displayFeeedback();
+		 void addFeedback();
+		 ~Feedback();
+		 
+};
+
+//Event class
+
+class Event
+{
+	private:
+		int e_No;
+		char e_time;
+		char e_date;
+		char e_type;
+	
+	public:
+	
+	Event();//constructor 
+	
+	void displayEventDetalis()
+	
+    ~Event();//destructor	
+};
+
+//.cpp files created
+//implementation of the classes
+// implemention of the Feedback class
+
+     Feedback::Feedback()
+     {
+     }
+     
+    Feedback::Feedback(int pfeedbackId,char pdescription, string pcustomer_name)
+        {
+	     	feedbackId = pfeedbackId;
+	     	description = pdescription;
+	     	customer_name = pcustomer_name;
+		 }
+	void Feedback::addFeedback()
+	    {}
+		
+	void Feedback::displayFeeedback()	 
+		 	 {
+		 	 cout << "FeedbackId = " << feedbackId << endl;
+		 	 cout << "Description = " << description <<endl;
+             cout << "customer_name = " << customer_name<< endl;
+             
+		 }
+		 Feedback::~Feedback()
+		 {
+		 }
+     
+//implementation of the Event class
+	  Event::Event()
+     {
+     }
+     
+    void Event::displayEventDetalis()
+
+	 {
+		cout << "e_No = " << e_No << endl;
+	  cout << "e_time = " << e_time << endl;
+		cout << "e_date = " << e_date <<endl;
+    cout << "e_type = " << e_type<< endl;
+	 }
+	
+    Event::~Event()
+	 {
+   }		
