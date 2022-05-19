@@ -1,0 +1,127 @@
+//IT21241864
+//Jayawardhana J.R.Y.T
+//class declaration
+
+//h.files
+//declaration of "Reservation" class
+
+#include <iostream>
+#include <cstring>
+using namespace std ;
+#include "Payment.h"
+#include "Customer.h"
+#include "Receptionist.h"
+
+class Reservation
+{
+	private :
+		int R_ID ;
+		int Customer_NIC ;
+		char R_Date(10) ;
+		int Hall_No ;
+		
+	public :
+		Reservation () ;
+		Reservation(int rId ,int NIC , const char date[] , int hall ) ;
+		void setReservationDetails (int id , int nic , const char day[] , int no ) ;
+		void displayReservationDetails() ;
+			
+};
+
+//declaration of "Hotel manager class"
+
+class Hotelmanager
+{
+	private :
+		int H_ID ;
+		char H_name(25) ;
+		char H_contact(10) ;
+		
+	public :
+		Hotelmanager () ;
+		Hotelmanager(int mId , const char mName[] , const char contactNo[] ) ;
+		void setHotelmanagerDetails (int id , const char name[] , const char number[]) ;
+		void checkTheHall() ;
+		void displayHotelmanagerDetails() ;
+			
+};
+
+//.cpp files
+//implementation of Reservation class
+
+Reservation::Reservation ()
+{
+	R_ID = 0 ;
+	Customer_NIC = 0 ;
+	strcpy(R_Date,"") ;
+	Hall_No = 0 ;
+}
+
+Reservation::Reservation(int rId , int NIC , const char date[] , int hall )
+{
+	rId = R_ID ;
+	NIC = Customer_NIC ;
+	strcpy(R_Date,date) ;
+	hall = Hall_No ;
+	
+}
+
+void Reservation:: setReservationDetails (int id , int nic , const char day[] , int no ) ;
+{
+	R_ID = id ;
+	Customer_NIC = nic  ;
+	strcpy(R_Date,day) ;
+	Hall_No = no ;
+	
+}
+
+void Reservation:: displayReservationDetails()
+{
+	cout<<"Reservation ID :"<<R_ID<<endl ;
+	cout<<""<<endl;
+	cout<<"Customer NIC : "<<Customer_NIC<<endl ;
+	cout<<""<<endl;
+	cout<<"Reservation Date :"<<R_Date<<endl ;
+	cout<<""<<endl;
+	cout<<"Hall no : "<<Hall_No<<endl ;
+	
+}
+
+//Implementation of Hotel manager class
+
+Hotelmanager::Hotelmanager ()
+{
+	H_ID = 0 ;
+	strcpy(H_name,"") ;
+	strcpy(H_contact,"") ;
+}
+
+Hotelmanager::Hotelmanager(int mId , const char mName[] , const char contactNo[]  )
+{
+	mId = H_ID ;
+	strcpy(H_name,mName) ;
+	strcpy(H_contact,contactNo)  ;
+	
+}
+
+void Hotelmanager:: setHotelmanagerDetails (int id , const char name[] , const char number[])
+{
+	H_ID = id ;
+	strcpy(H_name,name) ;
+	strcpy(H_contact,number) ;
+}
+
+void Hotelmanager:: displayHotelmanagerDetails()
+{
+	cout<<"Hotel manager ID :"<<H_ID<<endl ;
+	cout<<""<<endl;
+	cout<<"Hotel manager name : "<<H_name<<endl ;
+	cout<<""<<endl;
+	cout<<"Hotel manager contact number :"<<H_contact<<endl ;
+	
+}
+
+void Hotelmanager::checkthehall()
+{
+	
+}
