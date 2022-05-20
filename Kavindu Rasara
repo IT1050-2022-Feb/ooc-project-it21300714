@@ -1,0 +1,45 @@
+// Kavindu Rasara it21242304//
+
+class Hall{
+
+private:
+
+     int Hall_No;
+     string Hall_type;
+     char Hall_space;
+
+public:
+
+    // cosntructor (parameterized)
+
+    Hall(int hall_no, string hall_type, char hall_space){
+        
+        Hall_No = hall_no;
+        Hall_type = hall_type;
+        Hall_space = hall_space;
+    }
+#include <iostream>
+using namespace std;
+
+/
+    void Reserve(){
+
+        // ??
+
+    }
+
+    void ProvideInformation(){
+
+        // display information of the hall object in the terminal
+
+        cout << "Hall no: " << Hall_No << endl;
+        cout << "Hall type: " << Hall_type << endl;
+        cout << "Hall space: " << Hall_space << endl;
+
+    }
+    
+    
+
+    // destructor
+
+    ~Hall()
