@@ -91,14 +91,21 @@ int main()
 	 r_1=new Receptionist(2000678569, "Sahanya" , "0702678546");
      r_1->Displaydetails();
      
-     Hotel_Manager *hm_1;
-	 hm_1=new Hotel_Manager(5678909876, "Thanuri", "0716789875");
-     hm_1->Hotelmanager();
-     
-     Reservation *rv_1;
-	 rv_1=new Reservation(234, "200171900976", "09-08-2022", "07");
-     rv_1->setreservationdetails();
-     
+     Hotelmanager manager1 , manager2 ;
+	
+	manager1.setHotelmanagerDetails(56,"Minidu navika","0766789031") ;
+	manager2.setHotelmanagerDetails(96,"Bhago navika","0701677904") ;
+	
+	manager1.displayHotelmanagerDetails() ;
+	manager2.displayHotelmanagerDetails() ;     
+Reservation reservation1 , reservation2 ;
+	
+	reservation1.setReservationDetails(1,123456,"19-09-1998",14) ;
+	reservation2.setReservationDetails(2,987657,"03-10-2000",9) ;
+	
+	reservation1.displayReservationDetails() ;
+	reservation2.displayReservationDetails() ;
+	     
      Event *e_1;
 	 e_1=new Event(67, "09.00", "09-08-2022", "Wedding");
      e_1->Displayeventdetails();
@@ -125,6 +132,6 @@ int main()
 	 delete h_1;
 	 delete p_1;
 	 delete F_1;
-	 
+	 return 0;
 }
 
